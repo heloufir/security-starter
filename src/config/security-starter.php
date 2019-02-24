@@ -20,6 +20,22 @@ return [
             'profile_roles' => 'profile_roles',
             'user_profiles' => 'user_profiles'
         ]
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Privileges
+    |--------------------------------------------------------------------------
+    |
+    | This value represents the roles that the use must have to access
+    | respectively the profiles and roles REST resources
+    | >> Please refer to [https://github.com/heloufir/security-starter] to have
+    | an idea on how to use this package
+    |
+    */
+    'privileges' => [
+        'profiles' => 'any,ROLE_PROFILES',
+        'roles' => 'any,ROLE_ROLES'
     ]
 
 ];

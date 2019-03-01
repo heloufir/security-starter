@@ -2,6 +2,10 @@ Security-Starter is a ready to use package that provide to you a complete CRUD R
 
 ![Security starter architecture](https://lh3.googleusercontent.com/-ZPq7gXOK7gM/XHO22Ns2z4I/AAAAAAAAEsQ/6lu1zpoi_n81rEEqGlSG4btyNST6Up9wgCLcBGAs/s0/2019-02-25_102913.png "2019-02-25_102913.png")
 
+# A full implementation
+
+You can find a complete implementation of this repository in [Ngx Security Starter](https://github.com/heloufir/ngx-security-starter)
+
 # Installation
 
 	composer require heloufir/security-starter

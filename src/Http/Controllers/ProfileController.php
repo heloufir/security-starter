@@ -173,6 +173,9 @@ class ProfileController extends Controller
         DB::table(config('security-starter.tables.associations.profile_roles'))
             ->where('refProfile', $id)
             ->delete();
+        DB::table(config('security-starter.tables.associations.user_profiles'))
+            ->where('refProfile', $id)
+            ->delete();
         return response()->json(Profile::where('id', $id)->delete(), 200);
     }
 }

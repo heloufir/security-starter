@@ -67,7 +67,7 @@ class RoleMiddleware
     private function any($user, Collection $roles): bool
     {
         $result = false;
-        foreach ($user->profiles() as $profile) {
+        foreach ($user->profiles as $profile) {
             $result = $result || $profile->roles->pluck('code')->intersect($roles)->count() != 0;
         }
         return $result;
@@ -88,7 +88,7 @@ class RoleMiddleware
     private function all($user, Collection $roles): bool
     {
         $results = collect();
-        foreach ($user->profiles() as $profile) {
+        foreach ($user->profiles as $profile) {
             $intersection = $profile->roles->pluck('code')->intersect($roles);
             foreach ($intersection as $item) {
                 if (!$results->contains($item)) {

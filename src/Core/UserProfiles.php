@@ -15,7 +15,7 @@ trait UserProfiles
      */
     public function profiles()
     {
-        return $this->belongsToMany(Profile::class, config('security-starter.tables.associations.user_profiles'), 'refUser', 'refProfile')->get();
+        return $this->belongsToMany(Profile::class, config('security-starter.tables.associations.user_profiles'), 'refUser', 'refProfile');
     }
 
 }

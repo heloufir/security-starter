@@ -121,6 +121,22 @@ protected $routeMiddleware = [
 ];
 ```
 
+> Don't forget to update the guards in your **auth.php** configuration file for the `api` to **passport**
+
+```php
+'guards' => [
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'api' => [
+            'driver' => 'passport', // <- Here
+            'provider' => 'users',
+        ],
+    ],
+```
+
 That's all, the installation and configuration of **security-starter** is done.
 
 You can check the [wiki](https://github.com/heloufir/security-starter/wiki) for more information about this package.

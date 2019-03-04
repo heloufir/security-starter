@@ -141,6 +141,9 @@ class RoleController extends Controller
         if ($validator->fails()) {
             return response()->json(collect($validator->getMessageBag())->flatten()->toArray(), 403);
         }
+        DB::table(config('security-starter.tables.associations.profile_roles'))
+            ->where('refRole', $id)
+            ->delete();
         return response()->json(Role::where('id', $id)->delete(), 200);
     }
 }

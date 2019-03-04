@@ -15,7 +15,7 @@ class CreateUserProfilesTable extends Migration
     {
         Schema::create(config('security-starter.tables.associations.user_profiles'), function (Blueprint $table) {
             $table->integer('refUser')->unsigned();
-            $table->foreign('refUser')->references('id')->on(app(config('auth.providers.users.model'))->table ?: 'users');
+            $table->foreign('refUser')->references('id')->on(app(config('auth.providers.users.model'))->getTable() ?: 'users');
             $table->integer('refProfile')->unsigned();
             $table->foreign('refProfile')->references('id')->on(config('security-starter.tables.profiles'));
             $table->primary(['refProfile', 'refUser']);

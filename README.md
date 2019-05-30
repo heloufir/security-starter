@@ -1,3 +1,5 @@
+<h3>Due to a time constraint, unfortunately this repository is no longer maintained.</h3>
+<br/>
 Security-Starter is a ready to use package that provide to you a complete CRUD REST system for a User/Profile/Role architecture, and also provide a middleware to specify roles that the user must have to access your routes, and it's based on the **heloufir/simple-passport** package that offers to you a **forgot password** system, you can refer to this [link](https://github.com/heloufir/simple-passport) to know more about this package.
 
 ![Security starter architecture](https://lh3.googleusercontent.com/-ZPq7gXOK7gM/XHO22Ns2z4I/AAAAAAAAEsQ/6lu1zpoi_n81rEEqGlSG4btyNST6Up9wgCLcBGAs/s0/2019-02-25_102913.png "2019-02-25_102913.png")
